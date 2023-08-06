@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://arby.party/home/navbarempty.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact</title>
+   <style>
+   
+     body{
+        width: 100%;
+        margin: auto; 
+        height:100%;
+        overflow: hidden;
+        left:0;
+        background-color:blue;
+        position:relative;
+        color:white;
+        background-image:url('https://sadhost.neocities.org/images/tiles/underwater.gif');
+        font-size:12px;
+        
+        }
+        a:visited{color:white;}
+        a:hover{color:white;}
+        a{color:white;}
+        
+        
+        .split{
+         
+   height: 50vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  left: 0;
+  background-color:blue;
+  position:absolute;
+  z-index:-1000000;
+  background-image:url('https://img.freepik.com/free-vector/blue-seamless-brick-background-vector-illustration-wall-texture_520826-4522.jpg');
+  box-shadow: 0px 5px 15px blue;
+  
+        }
+        .righthand {right:0;
+        z-index:-1000000;
+        position:absolute;
+        top:18%;
+        }
+        
+        .lefthand {
+          left:0;
+          z-index:-1000000;
+          position:fixed;
+          bottom:0px;}
+    
+.textpad{
+  text-align:left;
+  top:130px;
+  position:fixed;
+  margin: 0 auto;
+  display: absolute;
+  left:550px;
+  justify-content: center;}
+
+   </style> 
+  </head>
+  <body>
+  
+  
+  <nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul> 
+    <li><a href='https://arby.party/home'>HOME</a></li>
+    <li><a href='https://arby.party/works'>WORKS</a></li>
+    <li><a href='https://arby.party/art'>ART</a></li>
+    <li><a href='https://arby.party/fun'>FUN</a></li>
+    <li><a href='https://arby.party/about'>ABOUT</a></li>
+    <li><a href='https://arby.party/contact'>CONTACT</a></li>
+    <li><a href='https://arby.party/exit'>EXIT</a></li>
+  </ul>
+</nav>
+
+
+<div class="split"> 
+    </div>    
+    
+    <div class="lefthand"><img src="https://64.media.tumblr.com/9f4a27fa604eb7e01d38a5454f35784f/9a2b2917473a40b0-ba/s400x600/cf48e6ad2da0a810db51c575d560e2e19266513e.pnj" alt="left hand" height="250px">
+    </div>
+    
+    <div class="righthand"><img src="https://64.media.tumblr.com/cb9f6ddc39219873efc993067d822be5/b84e534a7c9ed17f-04/s400x600/1939df8aa7d3a51246d4f081424313f53934d926.pnj" alt="right hand" height="250px">
+    </div>
+<p><p>
+
+<div class="textpad">
+
+<div> 
+<img src="https://64.media.tumblr.com/8deaf2d77df9a01c8208ed529a45e5d3/fdc576dcbe0eb066-5d/s400x600/70d2911a0bad8ab1cf682cfa75de26316d00430d.pnj" alt="Contact Information" height="31px" >
+   <p> 
+    Professional inquiries directed to <a href="mailto:arby@cabletwo.tv">arby@cabletwo.tv</a><br>
+    If you like social media you can find me on <a href="https://twitter.com/arbyonline">Twitter</a> and <a href="https://www.instagram.com/arbyparty/">Instagram</a><br>
+    Find more of my work @ <a href="https://cabletwo.tv">Cable Two</a> and <a href="https://rileyarby.com">My Art Site</a>
+     </div> 
+    
+    
+    <p>
+<!-- you'll use a unique ID to reference each field in the JS -->
+
+<input type="text" id="name" placeholder="Name"><br>
+<textarea rows="4" cols="50" id="question" placeholder="Type your comment here and click 'send' to deliver a message to my personal public Discord server."></textarea>
+<button id="send">Send</button> </div>
+    
+    
+    <div class="fixed-footer">
+     <div class="container">
+      <div class="ticker"><div class="ticker__item">Did you know that you can find Cable Two on your cellular phone? Call or text (323) 484-6515 for more information.
+</div></div></div></div>
+
+ 
+    
+    <div class="bnews">
+   Call me</div> 
+
+  
+  <script>
+document.getElementById('send').onclick = function() {
+    var request = new XMLHttpRequest();
+    // change the webhook URL below (Discord channel settings > integration)
+    request.open("POST", "https://discord.com/api/webhooks/963293006146973706/wajFLJlDbcFF_pPaWzg0YA-r4f-ZfkvPnEWSunv93QdB3YfuOQ75V-wPghHO3JWanEBs");
+    request.setRequestHeader('Content-type', 'application/json');
+    // the below variables combine a label (text) + the textarea value + a newline (\n)
+    // add up to 2,000 characters (Discord's character limit)
+    var name = "Name: " + document.getElementById("name").value + "\n";
+    var question = "Question: " + document.getElementById("question").value;
+  
+    // you have to combine both into one single variable before you can pass it to discord
+    var date = new Date();
+    var f_date = date.toLocaleDateString("en-US");
+    var username = f_date;
+    var msg = name + question;
+    // play with it a bit until you get a feel for how you want the incoming messages to look!
+  
+    var params = {
+      // you can set the username to anything you want
+        username: username,
+        content: msg,
+    }
+    request.send(JSON.stringify(params));
+
+    // below gives your user some helpful feedback letting them know their message has been sent
+    alert('That’s it! Thank you.');
+    // below clears the form fields after submission
+    document.getElementById("question").value = '';
+}
+
+</script>
+
+
+
+ <audio
+        autoplay loop hidden id="Caribbean"
+        source src="https://dl.dropbox.com/s/zb47nor5snpla6q/Caribbean.mp3">
+        <source src="https://dl.dropbox.com/s/v6g95bgxj8ytcpn/Caribbean.ogg">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+  </body>
+</html>

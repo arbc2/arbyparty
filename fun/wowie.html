@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web site of arby</title>
+    
+    
+    <style>
+    
+    
+    
+     body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+        animation: gradient 10s infinite linear;
+        
+      }
+
+      /* Animate the gradient */
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      
+      } }
+      
+      
+  .windmill {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .windmill .blade {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: gray;
+    top: 75px;
+    left: 0;
+    transform-origin: 100px 25px;
+    animation: spin1 6s linear infinite;
+  }
+  
+  @keyframes spin1 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+
+<style>
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .teddy-bear {
+            width: 200px;
+            height: 200px;
+            background-color: #ffb6c1;
+            border-radius: 50%;
+            position: relative;
+            margin: auto;
+        }
+
+        .teddy-bear:before,
+        .teddy-bear:after {
+            content: "";
+            display: block;
+            background-color: #ffb6c1;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .teddy-bear:before {
+            margin-top: -70px;
+        }
+
+        .teddy-bear:after {
+            margin-top: 70px;
+        }
+        
+        .flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item-1 {
+  order: 1;
+}
+
+.flex-item-2 {
+  order: 2;
+}
+
+.flex-item-3 {
+  order: 3;
+}
+
+.flex-item-4 {
+  order: 4;
+}
+
+    </style>
+
+  </head>
+  <body>
+   
+
+<div class="windmill">
+  <div class="blade"></div>
+  <div class="blade" style="transform: rotate(45deg);"></div>
+  <div class="blade" style="transform: rotate(90deg);"></div>
+  <div class="blade" style="transform: rotate(135deg);"></div>
+</div>
+
+
+
+    <div class="teddy-bear"></div>
+
+
+  <style>
+    /* Style the news lower third */
+    .news-lower-third {
+      background-color: #333;
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<div class="flex-container">
+  <div class="flex-item-1">Box 1</div>
+  <div class="flex-item-2">Box 2</div>
+  <div class="flex-item-3">Box 3</div>
+  <div class="flex-item-4">Box 4</div>
+</div>
+
+
+  <div class="news-lower-third">
+    <p>Person's Name</p>
+    <p>Person's Title</p>
+    <p>Person's Location</p>
+  </div>
+
+
+<style>
+      /* Style the box */
+      .silly-box {
+        width: 200px;
+        height: 200px;
+        border: 10px solid red;
+        border-radius: 50%;
+        background-color: yellow;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        animation: spin 2s infinite linear;
+        top:0;
+        right:50px;
+        position:absolute;
+      }
+
+      /* Animate the box */
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  <p><p><p>
+    <div class="silly-box"></div>
+    
+    
+
+    <style>
+      /* Style the box */
+      .showstopping-box {
+        width: 200px;
+        height: 200px;
+        border: 10px solid blue;
+        background-color: purple;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        transform: rotateX(45deg) rotateY(45deg);
+        animation: spin3 2s infinite linear;
+        position:absolute;
+        right:50px;
+      }
+
+      /* Animate the box */
+      @keyframes spin3 {
+        from {
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+        to {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+    </style>
+  
+    <div class="showstopping-box"></div>
+  
+
+
+
+
+
+
+
+    <style>
+      /* Style the text */
+      .arby-text {
+        font-size: 48px;
+        font-family: sans-serif;
+        color: #333;
+        text-shadow: 1px 1px 0px #fff,
+                     -1px -1px 0px #fff,
+                     1px -1px 0px #fff,
+                     -1px 1px 0px #fff;
+        transform: rotateX(45deg) rotateY(45deg);
+        animation: spin4 2s infinite linear;
+      }
+
+      /* Animate the text */
+      @keyframes spin4 {
+        from {
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+        to {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+    </style>
+  
+    <p class="arby-text">arby</p>
+  
+
+
+
+
+<style>
+.mickey {
+  width: 200px;
+  height: 200px;
+  background-color: #ffc107;
+  position: absolute;
+  right:50%
+}
+
+.mickey:before, .mickey:after {
+  content: "";
+  position: absolute;
+  background-color: #ffc107;
+}
+
+.mickey:before {
+  top: -100px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.mickey:after {
+  top: -50px;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+</style>
+
+<div class="mickey"></div>
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+      /* Style the banner container */
+      .disney-banner {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      /* Style the banner text */
+      .disney-text {
+        font-size: 48px;
+        font-family: "Disney", sans-serif;
+        color: #fff;
+        text-shadow: 1px 1px 0px #000,
+                     -1px -1px 0px #000,
+                     1px -1px 0px #000,
+                     -1px 1px 0px #000;
+        transform: rotateX(45deg) rotateY(45deg);
+        animation: spin55 2s infinite linear;
+      }
+
+      /* Animate the text */
+      @keyframes spin55 {
+        from {
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+        to {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+    </style>
+  
+    <div class="disney-banner">
+      <p class="disney-text">Disney</p>
+    
+
+
+    
+  </body>
+</html>

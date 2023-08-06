@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <script src="/load.js"></script> 
+    <style>
+    body{height: 100vh;width:100vw;margin:0 auto;color:white;background-color:#5f5dbd;background-image:url('https://64.media.tumblr.com/e71caddb5f76d8bc9d03db61e1a83905/da269b526dec6743-3b/s2048x3072/041fb9638d76430bbd87a697c81cae2c09b07090.pnj');background-repeat:no-repeat;font-size:12px;font-family:'futura';position:absolute;}
+    #contain{width:700px;height:auto;margin:0 auto;color:white;background-color:transparent;position:relative;}
+    #line2{height:auto;bottom:-225px; right:0;width:100%; position:relative;background-color:cornflowerblue;background-image:linear-gradient(#0000a2,blue);border-radius:0px 0px 50px 50px;text-decoration:none;padding:5px 0px 5px 0px;}
+    #main{height:200px;top:0; right:0;width:100%; position:relative;background-size:cover;background-image:url('https://64.media.tumblr.com/86f5918d21c1c41696cff087d1e142a2/d4f3746fd4254c59-4f/s2048x3072/1502b5bddd90917e51f461fce5e3c9fdb5d04b84.pnj');}}  
+    a{font-family:'futura';text-decoration:none;}
+  @font-face {font-family:'futura';src: url('https://arby.party/fonts/futura.ttf');}
+ .carousel{top: 0px;width: 100%;position: relative;background: transparent;color: white;height: 80px;z-index:1;left:0;display:flex;justify-content: space-evenly;}
+ .Marquee {white-space:nowrap;background:transparent;width: auto;box-sizing: border-box;color: #fff;padding-top:5px;font-weight: 200;display: box;display: flex;align-items: center;overflow: hidden;justify-content: space-evenly;}
+ .Marquee-content {display: box;display: flex;justify-content: space-evenly;width:100%;}
+ .Marquee-content:hover {animation-play-state: paused;}
+ .Marquee-tag {width: 100%;box-shadow: 0px 0px 10px midnightblue;margin: 0 4px 4px 0;border-radius: 4px;height: 60px;background: rgba(255,255,255,0.1);display: flex;align-items: center;justify-content: space-evenly;transition: all 0.2s ease;overflow:hidden;}
+ .Marquee-tag:hover {background: #0000ff;transform: scale(1.1);cursor: pointer;overflow:hidden;}
+  a:link{color:cornflowerblue;}a:visited{color:cornflowerblue;}a:hover{color:cornflowerblue;}
+  .partylogo{margin:0px auto;position:absolute;top:-10px;left:0px;} .partylogo:hover {transform: scale(1.1);}
+ .flexcontainer {display:flex;flex-direction:row;flex-wrap:nowrap; height:auto;position:absolute;width:100%;justify-content:space-evenly;height:200px}
+ .flexitem{flex: 0 1 auto;align-self:auto;width:25%;padding: 10px;background-color:blue;margin-left: 2px;margin-right: 2px;border-radius:0px 0px 10px 10px;background-image:linear-gradient(#0000a2,cornflowerblue); vertical-align: top;margin-top:0px;position:relative;}
+ .flexitem:hover { background-image:linear-gradient(#0000a2,blue);}
+
+.flexitem:nth-child(1){
+     order: 1;
+     height:200px;
+    
+
+}
+ .flexitem:nth-child(2){
+     order: 2;
+    height:200px;
+  
+}
+ .flexitem:nth-child(3){
+     order: 3; 
+     height:200px;
+      
+}
+ .flexitem:nth-child(4){
+     order: 4;
+     height:200px;
+     margin-top:auto;
+}
+ .menutitle{
+ width:100%;
+ position:absolute;
+ top:-40px;
+ left:0px;
+ }
+
+}
+ .fancyheader{
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     margin:0px auto;
+     width:auto;
+     margin-top:75px;
+     border-radius:10px;
+     position:absolute;
+     background-image:url('https://arby.party/assets/headerimg.jpg');
+     height:200px;
+     background-size:cover;}
+     
+     .partylogo2{
+    margin:0px auto;
+    position:absolute;
+    top:-14px;
+    left:10px;
+    z-index:1000;
+    overflow:hidden;
+    
+    }
+      .partylogo2:hover{
+      transform: scale(1.1);}
+ }
+ .miniarby{
+    margin:0px auto;
+    position:absolute;
+    bottom:-20px;
+    right:-50px;
+     }
+    
+#newsletter{
+margin:0px auto;
+    position:absolute;
+    top:-5px;
+    right:10px;
+    
+    }
+    
+      #newsletter:hover {
+     transform: scale(1.1);}
+     
+     #arblog{
+margin:0px auto;
+    position:absolute;
+    bottom:40px;
+    right:170px;
+    
+    }
+    
+      #arblog:hover {
+     transform: scale(1.1);}
+    
+    
+    
+    #guestbooky{
+margin:0px auto;
+    position:absolute;
+    top:62px;
+    right:7px;
+    
+    }
+    
+     #guestbooky:hover {
+     transform: scale(1.1);}
+     .desc{ 
+      font-family:"meta-normal";
+      color:white;
+      font-size: 14px;
+      position: absolute;
+      top:0px;
+      left:60px;
+      z-index:1000000;
+   
+    
+      }
+    </style>
+  </head>
+  <body>
+  <center>
+<div id="contain">
+
+      <div class="carousel">
+   
+     <div class="Marquee">
+  <div class="Marquee-content">
+    <div class="Marquee-tag"> <a href="https://arby.party/about">
+         <img alt="fantasy flight" src="https://64.media.tumblr.com/83ddbdf553091512f34e643dc7781991/e1462bf9e57e2514-1f/s540x810/b991a9f6b812b33e35358bcf0bb66c80aaa7e9aa.gifv"
+         width="auto" height="60px" >
+         </a></div>
+    <div class="Marquee-tag"> <a href="https://cabletwo.net" target=”_blank”>
+         <img alt="cable two" src="https://64.media.tumblr.com/3e6b537536613a249d83cfdcecff1e0e/e64b9da99e34644e-52/s540x810/969e940e1a7f5d2b8e80df9d00338ebe0d1a4b38.gifv"
+         width="auto" height="60px" object-fit="cover">
+      </a></div>
+      <div class="Marquee-tag"> <a href="https://cabletwo.net" target=”_blank”>
+         <img alt="dunno" src="https://64.media.tumblr.com/54b2709546b2c788786b314c97a57c62/00276c86827da10f-7d/s540x810/18040b6fddc963ccd3249f62f64a82e232ffddc4.gifv"
+         width="auto" height="60px"></a></div>
+         
+    <div class="Marquee-tag"> <a href="https://arby.party/works/thenetwork.html">
+         <img alt="movie" src="https://64.media.tumblr.com/3e6b537536613a249d83cfdcecff1e0e/e64b9da99e34644e-52/s540x810/969e940e1a7f5d2b8e80df9d00338ebe0d1a4b38.gifv"
+         width="auto" height="60px">
+      </a></div>
+    <div class="Marquee-tag"> <a href="https://endofbody.com" target=”_blank”>
+         <img alt="art" src="https://64.media.tumblr.com/e2b61592832de004197a12306529fc86/1d529a66c3a7fe0e-6f/s540x810/3c976182cb0d85dd1818f62bbf205437f1dfe72d.gifv"
+         width="auto" height="60px">
+      </a></div> </div> </div>
+      
+      </div>
+
+ 
+ 
+ 
+ <div id="greenheader"></div>
+ 
+ 
+ <p>
+ <div id="main">
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="fancyheader">
+
+<div class="partylogo2">
+<img src="https://64.media.tumblr.com/732e0be5b6409beeda17c5e2ad041503/841c8359f4b229d4-ca/s2048x3072/11ec36886195a5f9e13e2ff3474927b47257267e.pnj" alt="Partylogo2" height="115px" width="auto">
+</div>
+
+ <div class="miniarby">
+<img src="https://arby.party/assets/arby.gif" height="200px"></div>
+
+ <div id='newsletter'><a href="https://forms.gle/hoH5ZiARcyeCihCU9" target="_blank" rel="noopener noreferrer"><img src="https://64.media.tumblr.com/22ecdeeac069065e677da748f160fb06/5878d339a0a52d89-46/s250x400/7eb29bacd55251b1324328bd721afd7dca37f66c.pnj"></a></div>
+ 
+ <div id='arblog'><a href="https://arby.party/blog" target="_blank" rel="noopener noreferrer"><img src="https://64.media.tumblr.com/8bcc5f3302ca68c8abaf9d9637319fb6/23563bb81d162907-e5/s540x810/eb29823ffe5b382564dfbabb5cb5b98642ef26f9.pnj" height="130;"></a></div>
+ 
+<div id='guestbooky'><a href="https://arby.party/guestbook/" target="_blank" rel="noopener noreferrer"><img src="https://64.media.tumblr.com/50a93140b30316ddd02262bf844d82a0/55ddae2779099d0d-06/s400x600/85453d9f21ba20ec55fce3487cb8df5ca37209f3.pnj" height="120px"></a></div>
+
+
+
+<div id="desc"></div> 
+
+
+</div>
+ 
+  <div class="flexcontainer">
+  
+
+<div class="flexitem">
+<div class="menutitle"><img src="https://arby.party/assets/watchbutton.png" width="100px"></div>
+
+</div>
+   
+<div class="flexitem">
+<div class="menutitle"><img src="https://arby.party/assets/readbutton.png" width="100px"></div>
+
+</div>
+ 
+   <div class="flexitem">
+   <div class="menutitle"><img src="https://arby.party/assets/playbutton.png" width="100px"></div>
+
+</div>
+
+   <div class="flexitem">
+   <div class="menutitle"><img src="https://arby.party/assets/featurebutton.png" width="170px"></div>
+
+</div>
+   </div>
+
+ 
+ 
+ 
+ <div id="line2"><p>this website is very under construction
+ <div id="footer"></div></div>
+
+
+
+ </div>
+
+ 
+ 
+ 
+ 
+<div id="footer"></div>
+ 
+
+
+
+
+ </div>
+</center>
+ 
+
+
+
+
+
+    
+    <audio
+        autoplay loop hidden id="Waterfall"
+        source src="https://dl.dropbox.com/s/zelhg7rtw57doaw/waterfall.mp3">
+        <source src="https://dl.dropbox.com/s/1l3qotqrvrfcwck/waterfall.ogg">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+    
+    <script>
+  var audio = document.getElementById("waterfall");
+  audio.volume = 0.1;
+</script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <script src="/load.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <title>About</title>
+   <style>
+   
+     body{
+        width: 100%;
+        height:100vh;
+        background-color:white;
+   background-repeat:repeat-y;
+   background-size:contain;
+   position: absolute;
+   overflow: hidden;
+  color:#333333;
+  font-size:12px;
+    text-shadow: 0px 0px 10px #5883F1;
+        
+     }
+
+
+
+.flex-container {
+    display: flex;    
+    background-color: transparent;
+    height: 100vh;
+    width:100vw;
+    gap: 5px;
+    left:0;
+    bottom:0;
+    flex-direction: column;
+  justify-content: center;
+
+  }
+.flex-div:nth-child(1){
+   height: 100%;
+  width: 50vw;
+  position: relative;
+  z-index: 2;
+  top: 0;
+  overflow-x: hidden;
+  background-color:white;
+  position:absolute;
+  z-index:-1000000;
+  box-shadow: 0px 5px 50px white;
+  background-image:url('');
+  background-size:cover;
+  flex: 1;
+ 
+  
+
+}
+  .flex-div:nth-child(2){
+   height: 100%;
+  width: 50vw;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  right:0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-color:white;
+  position:absolute;
+  z-index:-1000000;
+  box-shadow: 0px 5px 50px white;
+  background-image:url('https://64.media.tumblr.com/9bf8088c68cb88eceed22f1df8ea5d9a/94c37a7eb2c2ea6e-34/s500x750/8fa2b2aa990528fee7ae4f692d5d4830c28136f7.jpg');
+  background-size:cover;
+  flex: 1;
+ 
+  }
+  .text-div{
+    bottom:40px;
+    height:auto;
+    width:100%;
+    left:0;
+    position:absolute;
+    padding-left:10px;
+  }
+    </style>
+  </head>
+  <body>
+  
+  
+  <div id="greenheader"></div>
+
+<div class="split"> 
+      
+<p>
+
+<div class="flex-container">
+<div class="flex-div">
+<div class="text-div">
+<b>the story <i>so far</i></b><p>
+<p>before there was memory, there was a mountain. <br> inside it was filled with calculators, cellular phones, computers, televisions, <br> cars, smart home devices, buildings, shopping malls, theme parks, stereos, blu-ray players,<br> light, movement. now here i am.</p>
+
+<p>emerged from the earth in an unknown location, on an unknown date in the late 20th century,<br>destined to build entertainment with compassionate vision for a clean, mechanized world. <br>the biggest system for popular entertainment ever made <br> movies, television, music. what a glorious time to be free. </p>
+   
+   <p>this website will never be completed. <br> it is a living document that will continue to grow as long as there is imagination</p>
+
+    
+    </div>
+    </div>
+    <div class="flex-div">
+
+
+    
+    </div>
+    
+    </div>
+    </div> 
+   
+ <audio
+        autoplay loop hidden id="Feeling"
+        source src="https://dl.dropbox.com/s/81tx0s9i9hv9eqc/Earth%2C%20the%20Story%20So%20Far%20web.mp3">
+        <source src="https://dl.dropbox.com/s/mzqcmoxk2521c2j/Earth%2C%20the%20Story%20So%20Far%20web.ogg">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+
+
+
+
+  
+    
+    <script>
+  var audio = document.getElementById("waterfall");
+  audio.volume = 0.1;
+</script>
+
+  </body>
+</html>

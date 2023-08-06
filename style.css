@@ -1,0 +1,432 @@
+
+     body{
+        width: 100%;
+        margin: auto; 
+        left:0;
+        
+        
+      
+    }
+    
+    .container{
+        width: 100%;
+        margin: auto; 
+        overflow: hidden;
+        left:0;
+        display:flex;
+        justify-content:space-around;
+        
+      
+    }
+    
+        
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        height: 30px;
+        z-index:2;
+        font-size: 15px;
+        justify-content: space-around;
+        
+    }
+				 
+    .fixed-header{
+        top: 30;
+        text-align: left;
+        line-height: 30px; 
+        background:#0000ff;
+        color:white;
+	height: 30px;
+	left:0;
+	padding-left: 18px;
+	border-radius: 0px;
+	word-spacing: 15px;
+	display: flex;
+				align-items: left;
+				 justify-content: left;
+				 overflow: hidden;
+				 
+    }
+    .fixed-footer{
+       background: #0000a2;
+       color:white;
+        bottom: 0;
+        text-align: center;
+        border-top: 10px solid #0000ff;
+        box-shadow: 0px -4px 100px darkblue;
+        line-height: 30px; 
+        background-image:linear-gradient(#0000a2,navy);
+        
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: white;
+        text-decoration: none;
+      
+    }
+    
+        
+    .carousel{
+       top: 0px;
+       width: 100%;
+        position: fixed;        
+        background: #0000a2;
+        color: white;
+        height: 60px;
+       
+        z-index:1;
+        left:0;
+        display:flex;
+        justify-content: space-evenly;
+}
+ 
+        .trianglelogo{
+right:0;
+top:30px;
+border-style: solid;
+border-width: 0 0 15vw 15vw;
+border-color: transparent transparent #0000ff transparent;
+z-index: 4; 
+position: fixed;
+        }
+        
+@font-face {
+  font-family: "TemplateGothic";
+  src: url(/fonts/TemplateGothic.ttf);
+}
+
+
+@font-face {
+  font-family: "meta-normal";
+  src: url(/fonts/meta-normal.ttf);
+}
+body {
+font-family:"meta-normal";
+}
+
+    body{        
+        left: 0;
+        background: #001EAF;
+    }
+  
+ 
+ @font-face {
+  font-family: "TemplateGothic";
+  src: url(/fonts/TemplateGothic.ttf);
+}
+  
+      
+      
+      .ticker {
+        position: relative;
+  user-select: none;
+  white-space:nowrap;
+  animation: ticker 20s linear infinite;
+  width: 100%;
+}
+
+
+@media(max-width:1000px) 
+{
+    .ticker {
+        animation: ticker1000 15s linear infinite;
+    }
+}
+
+@media(min-width:1001px) 
+{
+    .ticker {
+        animation: ticker1001 20s linear infinite;
+    }
+}
+
+
+@keyframes ticker1000 {
+    0%    { transform: translate3d(1000px, 0, 0); }
+    100%  { transform: translate3d(-1000px, 0, 0) }
+}
+
+@keyframes ticker1001 {
+    0%    { transform: translate3d(85vw, 0, 0); }
+    100%  { transform: translate3d(-100vw, 0, 0) }
+}
+
+
+.bnews{
+        width: 100px;
+        position: fixed;        
+        background:#0000ff;
+        color: white;
+        height: 30px;
+        z-index:3;
+        font-size: 15;
+        left:0;
+        bottom: 0;
+        text-align: center;
+        line-height: 25px;
+        padding:1px;
+        font-family:"TemplateGothic";
+        border-radius:2;
+        background-image:linear-gradient(#0000FF, darkblue);
+        
+        }
+
+       
+
+ #menu {
+	background: #0000FF;
+	color: white;
+	height: 30px;
+	border-radius: 0px;
+	width:100%;
+	z-index: 10;
+	position: fixed;
+	font-family:"TemplateGothic";
+	top:60px;
+	background-image:linear-gradient(#0000FF, darkblue);
+	text-shadow: 0px 0px 10px white;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+ border: 1px groove darkblue;
+ border-radius:2px;
+}
+#menu a {
+	display: block;
+	line-height: 30px;
+	padding: 0 10px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 15px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5;
+}
+#menu li a:hover {
+	color: #FFFFFF;
+	background: #0000a2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	width: 100%;
+	opacity:0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #0000a2;
+	position: absolute;
+	z-index: 99;
+	display: none;
+	
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #0000a2;
+	color: white;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#0000ff;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+	
+}
+
+ 
+       .Marquee {
+        white-space:nowrap;
+         background:transparent;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  padding-top:5px;
+  font-weight: 200;
+  display: box;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-around;
+  
+}
+.Marquee-content {
+  display: box;
+  display: flex;
+  justify-content: space-around;
+  
+ 
+}
+.Marquee-content:hover {
+  animation-play-state: paused;
+}
+.Marquee-tag {
+  width: 20vw;
+  box-shadow: 0px 0px 10px midnightblue;
+  margin: 0 0.0em;
+  border:4px solid #0000ff;
+  border-radius: 4px;
+  height: 60px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.2s ease;
+  overflow:hidden;
+
+}
+.Marquee-tag:hover {
+  background: #0000ff;
+  transform: scale(1.1);
+  cursor: pointer;
+  overflow:hidden;
+  
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+    }
+    
+    .flexitem{
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+    padding:10px;
+    background-color:blue;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top:400px;
+    border-radius:10px;
+    border: 3px groove darkblue;
+    box-shadow: 0px 0px 10px midnightblue;
+    background-image:linear-gradient(#0000a2,navy);
+    }
+
+.flexitem:nth-child(1){
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+    height:200px;
+    width:124px;
+    
+    }
+
+.flexitem:nth-child(2){
+    order: 2;
+    flex: 0 1 auto;
+    align-self: auto;
+     height:200px;
+     width:124px;
+  
+    }
+
+.flexitem:nth-child(3){
+    order: 3;
+    flex: 0 1 auto;
+    align-self: auto;
+     height:200px;
+     width:124px;
+  
+    }
+
+.flexitem:nth-child(4){
+    order: 4;
+    flex: 0 1 auto;
+    align-self: auto;
+    height:150px;
+    width:264px;
+    margin-top: auto
+    }
+  
+  
+
+   /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 800px) {
+  body
+{ overflow-y: scroll; 
+position: absolute;
+background-image:url('https://arby.party/home/mobilebluebg');
+}
+  .flexcontainer {
+
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding-top:0px;
+    gap: 10px;
+    align-items:center;
+    vertical-align:center;
+    position:absolute;
+   
+
+  }
+
+  .flexitem{
+    height:480px;
+    width: 100vw;
+    font-size:20px;
+    padding: 5px;
+    position:absolute;
+  }
+
+}
+
+    
+    
+    .minititle{
+        font-family:"TemplateGothic";
+      
+    }
+      

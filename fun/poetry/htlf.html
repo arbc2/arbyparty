@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>how to live forever</title>
+   <style>
+   
+     body{
+        width: 100%;
+        margin: auto; 
+        left:0;
+        background-color:#7092BE;
+         background-image:url('https://64.media.tumblr.com/3b60c1d5bb8888de36495f7bfca75d9c/d4b4862ccf1e7192-d7/s1280x1920/e5875b394fecf2e243b5afbcbe2da2b9e0bc5d58.png');
+   background-repeat: no-repeat;
+   background-size: 100%, auto;
+   position: absolute;
+   color:white;
+
+        
+     }
+     h1{
+       font-family:'Arial';
+       margin-top: 0;
+       z-index:10000;
+       padding-top:25px;
+       color:white;
+       text-shadow: 2px 2px 8px #6482B3;
+       
+    }
+    
+     h2{
+       font-family:'TemplateGothic';
+       margin-top: 0;
+    }
+    .container{
+        width: 100%;
+        margin: auto; 
+      
+        left:0;
+        display:flex;
+        justify-content:space-around;
+        
+      
+    }
+    
+        
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        height: 30px;
+        z-index:2;
+        font-size: 15px;
+        justify-content: space-around;
+        position: fixed;
+        
+    }
+				 
+    .fixed-header{
+        top: 0;
+        text-align: left;
+        line-height: 30px; 
+        background:blue;
+        color:white;
+	height: 30px;
+	left:0;
+	padding-left: 18px;
+	border-radius: 0px;
+	word-spacing: 15px;
+	display: flex;
+				align-items: left;
+				 justify-content: left;
+				 
+				 
+    }
+    .fixed-footer{
+       background: black;
+       color:white;
+        bottom: 0;
+        text-align: center;
+        border-top: 10px solid #2D4464;
+        border-right: 110px solid #2D4464;
+        box-shadow: 0px -4px 100px midnightblue;
+        line-height: 30px; 
+        
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: white;
+        text-decoration: none;
+      
+    }
+    
+ 
+        .trianglelogo{
+right:0;
+bottom:0;
+border-style: solid;
+border-width: 0 0 15vw 15vw;
+border-color: transparent transparent #2D4464 transparent;
+z-index: 4; 
+position: fixed;
+        }
+        
+@font-face {
+  font-family: "TemplateGothic";
+  src: url(/fonts/TemplateGothic.ttf);
+}
+
+
+@font-face {
+  font-family: "meta-normal";
+  src: url(/fonts/meta-normal.ttf);
+}
+body {
+font-family:"meta-normal";
+}
+
+    body{        
+        left: 0;
+        
+    }
+  
+ 
+ @font-face {
+  font-family: "TemplateGothic";
+  src: url(/fonts/TemplateGothic.ttf);
+}
+  
+      
+      
+      .ticker {
+        position: relative;
+  user-select: none;
+  white-space:nowrap;
+  animation: ticker 20s linear infinite;
+  width: 100%;
+}
+
+
+@media(max-width:1000px) 
+{
+    .ticker {
+        animation: ticker1000 15s linear infinite;
+    }
+}
+
+@media(min-width:1001px) 
+{
+    .ticker {
+        animation: ticker1001 20s linear infinite;
+    }
+}
+
+
+@keyframes ticker1000 {
+    0%    { transform: translate3d(1000px, 0, 0); }
+    100%  { transform: translate3d(-1000px, 0, 0) }
+}
+
+@keyframes ticker1001 {
+    0%    { transform: translate3d(85vw, 0, 0); }
+    100%  { transform: translate3d(-100vw, 0, 0) }
+}
+
+
+.bnews{
+        width: auto;
+        position: fixed;        
+        background:#2D4464;
+        color: white;
+        height: 30px;
+        z-index:3;
+        font-size: 10;
+        left:0;
+        bottom: 0;
+        text-align: center;
+        line-height: 25px;
+        padding:1px;
+        padding-left:5px;
+        padding-right:5px;
+        font-family:"TemplateGothic";
+        border-radius:2;
+        
+}
+
+ #menu {
+	background: #2D4464;
+	color: white;
+	height: 30px;
+	border-radius: 0px;
+	width:100%;
+	z-index: 10;
+	position: fixed;
+	font-family:"TemplateGothic";
+	box-shadow: 0px -4px 100px midnightblue;
+	position: fixed;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 30px;
+	padding: 0 10px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 15px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5;
+}
+#menu li a:hover {
+	color: #FFFFFF;
+	background: black;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	width: 100%;
+	opacity:0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	
+	width: 170px;
+	background: #0000a2;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #0000a2;
+	color: white;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#2D4464;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+	
+}
+
+
+
+
+
+
+
+.flex-container {
+
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    gap: 10px;
+    align-items:center;
+    vertical-align:baseline;
+    top:50%;
+    left: 50%;
+  
+  }
+
+  .flex-container > div{
+    background: #7092BE;
+    background-image:url('https://sadhost.neocities.org/images/tiles/anisnow.gif');
+        border: 4px double black;
+    height:480px;
+    width: auto,854px;
+    font-size:20px;
+    padding: 5px;
+     align-items: center;
+  justify-content: center;
+  vertical-align:baseline;
+  }
+  
+  .divres {
+ width:854px;
+  height:480px;
+  }
+  
+
+   /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 1340px) {
+  body
+{ overflow-y: scroll; 
+position: absolute;
+}
+  .flex-container {
+
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding-top:0px;
+    gap: 10px;
+    align-items:center;
+    vertical-align:center;
+
+  }
+
+  .flex-container > div{
+    background: #7092BE;
+     background-image:url('https://sadhost.neocities.org/images/tiles/anisnow.gif');
+    border: none;
+    height:480px;
+    width: 100vw;
+    font-size:20px;
+    padding: 5px;
+  }
+.divres{
+ width:100%;
+  height:auto;
+}
+  
+  
+/
+  } 
+
+  
+  </style>
+  
+  
+  </head>
+  <body>
+  
+ 
+  
+    <nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul> 
+    <li><a href='https://arby.party/home'>HOME</a></li>
+    <li><a href='https://arby.party/works'>WORKS</a></li>
+    <li><a href='https://arby.party/art'>ART</a></li>
+    <li><a href='https://arby.party/fun'>FUN</a></li>
+    <li><a href='https://arby.party/about'>ABOUT</a></li>
+    <li><a href='https://arby.party/contact'>CONTACT</a></li>
+    <li><a href='https://arby.party/exit'>EXIT</a></li>
+   
+  </ul>
+</nav>
+
+<center>
+<p> 
+
+  <h1>how to live forever</h1>
+ 
+    <div class="flex-container">
+   
+<div class="item1">
+ <img src="https://web.archive.org/web/20091026235755/http://www.geocities.com/khing100/Clouds_on_easel.gif" alt="cloud on easel"> 
+    <br>a 30 page mini-book <br> digital art and poetry <p>
+    
+   <a href="https://arby.party/disclaimer.html">reader discretion guide</a>
+
+</p>
+ 
+      click <a href="https://arby.party/fun/poetry/how%20to%20live%20forever.pdf">this</a> to download pdf<br>
+      all works cc0
+    <p>
+    if you like the <br> art on this page <br> leave a comment <a href="http://www.freegb.net/gbook/arby">here</a> <p> support more art like this <p>
+  <a href="https://www.buymeacoffee.com/arbyhere"><img src="https://img.buymeacoffee.com/button-api/?text=tip jar&emoji=🌐&slug=arbyhere&button_colour=5F7FFF&font_colour=ffffff&font_family=Arial&outline_colour=000000&coffee_colour=FFDD00"/></a>
+   </p>
+   </div>
+    
+    <div class="item2">
+    <div class="divres">
+<iframe
+  frameborder="0"
+  scrolling="no"
+  width="100%"
+  height="480px"
+  src="https://drive.google.com/file/d/1prlZD6i7IeqfEJBuLtwEaQXL3kQaFGjX/preview"
+  media="(min-width: 1340px)"
+>
+</iframe>
+</div></div>
+    
+
+  
+    
+    
+    
+    
+    </center>
+    
+    
+    
+    <audio
+        autoplay loop hidden id="Earth"
+        source src="https://dl.dropbox.com/s/p2gyrlcsj7wz88x/How%20To%20Live%20Forever%20Playlist.mp3">
+        <source src="https://dl.dropbox.com/s/8cy99sf86c9p71w/How%20To%20Live%20Forever%20Playlist.ogg">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+   <div class="fixed-footer">
+     <div class="container">
+      <div class="ticker"><div class="ticker__item1">the rest of this website is a construction zone. this is the only completed page
+</div>
+
+</div></div></div>
+
+ <div class="container">
+    </div>    
+    
+    <div class="bnews">
+   note</div> 
+
+    
+    <div class="identlogo">
+    </div> 
+    
+    
+     
+    
+  </body>
+</html>
